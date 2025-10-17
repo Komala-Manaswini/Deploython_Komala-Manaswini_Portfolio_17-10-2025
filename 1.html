@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Komala Manaswini | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #fff6f6, #f3f1ff, #e6faff);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 8%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 1.6rem;
+      color: #6b00ff;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #7b61ff;
+    }
+
+    section {
+      padding: 80px 8%;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+    }
+
+    .hero-text {
+      flex: 1 1 400px;
+    }
+
+    .hero-text h2 {
+      font-size: 2.8rem;
+      background: linear-gradient(90deg, #ff8a8a, #7b61ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+      color: #fff;
+      background: linear-gradient(90deg, #ff8a8a, #7b61ff);
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      opacity: 0.85;
+    }
+
+    .profile-img {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #7b61ff, #00d4ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 2.5rem;
+      font-weight: bold;
+      box-shadow: 0 0 30px rgba(123, 97, 255, 0.4);
+    }
+
+    .skills, .projects, .education, .achievements, .contact {
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: #4b0082;
+    }
+
+    .skills-list, .projects-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(8px);
+      border-radius: 20px;
+      padding: 25px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #7b61ff;
+    }
+
+    .project-links a {
+      display: inline-block;
+      margin: 8px;
+      color: #fff;
+      background: #7b61ff;
+      padding: 6px 14px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .education-item, .achievement-item {
+      background: rgba(255,255,255,0.8);
+      padding: 20px;
+      border-radius: 12px;
+      margin: 15px auto;
+      max-width: 500px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: inherit;
+      resize: none;
+    }
+
+    footer {
+      background: #f3f1ff;
+      text-align: center;
+      padding: 20px;
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    @media(max-width:768px){
+      .hero { text-align: center; }
+      .profile-img { margin: 0 auto; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Komala Manaswini</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Hello, I'm Komala 👋</h2>
+      <p>I built this project as part of a Deploython challenge where I had to design and deploy a static portfolio website. It showcases my front-end skills, creativity, and responsive design approach.</p>
+      <button class="btn" onclick="scrollToSection('projects')">View Projects</button>
+    </div>
+    <div class="profile-img">KM</div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p style="max-width:700px;margin:0 auto;color:#555;">
+      I'm a passionate web developer who enjoys crafting visually appealing and functional websites.
+      I focus on clean design, smooth animations, and user-friendly layouts. Currently exploring full-stack development and design optimization.
+    </p>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-list">
+      <div class="card"><h3>Frontend</h3><p>HTML, CSS, JavaScript, React</p></div>
+      <div class="card"><h3>Backend</h3><p>Node.js, Express, Firebase</p></div>
+      <div class="card"><h3>Tools</h3><p>Git, VS Code, Figma</p></div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-list">
+      <div class="card">
+        <h3>Aurora UI</h3>
+        <p>A vibrant UI kit with animated components and modern design patterns.</p>
+        <div class="project-links">
+          <a href="#">Demo</a>
+          <a href="#">Code</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>StudyMate Quiz</h3>
+        <p>A lightweight quiz app with scoring, feedback, and question randomization.</p>
+        <div class="project-links">
+          <a href="#">Demo</a>
+          <a href="#">Code</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Mini E-Commerce Mock</h3>
+        <p>A mock shopping site with product cards, cart interactions, and dynamic data.</p>
+        <div class="project-links">
+          <a href="#">Demo</a>
+          <a href="#">Code</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="education">
+    <h2 class="section-title">Education</h2>
+    <div class="education-item">
+      <h3>B.Sc. Computer Science</h3>
+      <p>Institution Name — 2021–2024</p>
+      <p>Focused on software development, algorithms, and web technologies.</p>
+    </div>
+  </section>
+
+  <section class="achievements">
+    <h2 class="section-title">Achievements</h2>
+    <div class="achievement-item">🏆 Hackathon Finalist — Deploython 2025</div>
+    <div class="achievement-item">🎓 Certified in Web Development Bootcamp</div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="section-title">Get in Touch</h2>
+    <form onsubmit="event.preventDefault(); alert('Message sent successfully! (Demo only)')">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Komala Manaswini — Built as part of Deploython Challenge
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>

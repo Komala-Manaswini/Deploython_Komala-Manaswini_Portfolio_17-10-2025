@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <h1 class="logo">My<span>Portfolio</span></h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="dark-toggle"><i class="fa-solid fa-moon"></i></button>
+  </header>
+
+  <section id="home" class="home">
+    <h2>Hello, I'm <span>Your Name</span></h2>
+    <p>Full Stack Developer | Student | Hackathon Enthusiast</p>
+    <button class="btn">View My Work</button>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <img src="profile.jpg" alt="Profile Photo">
+    <p>B.Tech CSE student passionate about backend development, AI, and full-stack projects.</p>
+    <a href="resume.pdf" class="btn" download>Download Resume</a>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <div class="skill-category">
+      <h3>Frontend</h3>
+      <p>HTML, CSS, JavaScript, React</p>
+    </div>
+    <div class="skill-category">
+      <h3>Backend</h3>
+      <p>Python (Flask), Node.js, Express</p>
+    </div>
+    <div class="skill-category">
+      <h3>Tools</h3>
+      <p>MySQL, Git, VS Code</p>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>AI Recipe Platform</h3>
+      <p>Flask-based recipe-sharing system with dynamic recipe uploads.</p>
+      <p><b>Tech Stack:</b> Python, Flask, MySQL, HTML</p>
+      <a href="#" class="btn">View Code</a>
+      <a href="#" class="btn">Live Demo</a>
+    </div>
+    <div class="project-card">
+      <h3>Weather Dashboard</h3>
+      <p>Displays real-time weather data with visualization.</p>
+      <p><b>Tech Stack:</b> JavaScript, API, Chart.js</p>
+      <a href="#" class="btn">View Code</a>
+      <a href="#" class="btn">Live Demo</a>
+    </div>
+  </section>
+
+  <section id="education" class="education">
+    <h2>Education</h2>
+    <p>B.Tech Honors in Computer Science & Engineering</p>
+    <p>XYZ Institute of Technology (2021–2025)</p>
+  </section>
+
+  <section id="experience" class="experience">
+    <h2>Experience</h2>
+    <p><b>Backend Developer Intern – AI Chatbot Project</b></p>
+    <p>Developed Flask and Node.js APIs for intelligent educational bots.</p>
+  </section>
+
+  <section id="achievements" class="achievements">
+    <h2>Achievements & Certifications</h2>
+    <ul>
+      <li>Winner – AI Hackathon 2025</li>
+      <li>Coursera Certified in Python and Machine Learning</li>
+      <li>GFG & NPTEL Tech Certifications</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <div class="socials">
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Your Name | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
